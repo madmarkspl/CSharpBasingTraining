@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TrainingTwo/bin/Debug
+/Units/bin/Debug
+/Units/obj/Debug
+/.vs/TrainingTwo/v15/Server/sqlite3
+/.vs/TrainingTwo/v15
