@@ -11,8 +11,18 @@ namespace TrainingTwo
     {
         static void Main(string[] args)
         {
-            Orc orc = new Orc();
+            Orc orc = new Orc(40);
+            Orc orc2 = new Orc(50);
+            Orc orc3 = new Orc(50);
 
+
+            orc.Shout();
+            orc2.Shout("Alliance");
+            orc3.Shout(2019);
+            Console.WriteLine(orc._hitPoints);
+            Console.WriteLine(orc2._hitPoints);
+
+            Console.ReadKey();
         }
     }
 }
