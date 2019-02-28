@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Units
 {
-    public class Orc
+    public abstract class Orc
     {
-        public int _hitPoints;
+        protected int age;
+
+        private int _hitPoints;
         private Weapon weapon;
 
         public Orc(int hitPoints)
@@ -16,10 +14,18 @@ namespace Units
             _hitPoints = hitPoints;
         }
 
+        public void GetHurt(int damage)
+        {
+            _hitPoints -= damage;
+            Console.WriteLine(_hitPoints);
+        }
+
         public void Shout()
         {
             Console.WriteLine("For the Horde!");
         }
+
+        public abstract void DieCry();
 
         public void Shout(string what)
         {

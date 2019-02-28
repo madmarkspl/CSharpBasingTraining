@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Units;
 
 namespace TrainingTwo
@@ -11,18 +7,29 @@ namespace TrainingTwo
     {
         static void Main(string[] args)
         {
-            Orc orc = new Orc(40);
-            Orc orc2 = new Orc(50);
-            Orc orc3 = new Orc(50);
+            Square sq = new Square();
+            IShape[] shapes = { sq, new Triangle() };
 
+            foreach (var shape in shapes)
+            {
+                Console.WriteLine(shape.Area());
+            }
 
-            orc.Shout();
-            orc2.Shout("Alliance");
-            orc3.Shout(2019);
-            Console.WriteLine(orc._hitPoints);
-            Console.WriteLine(orc2._hitPoints);
+            RefAndOut aa = new RefAndOut();
+            int x = 7;
+            aa.Ref(ref x);
+            Console.WriteLine(x);
+
 
             Console.ReadKey();
         }
+
+        public struct MyStruct
+        {
+            public int value0;
+            public double value1;
+            public Square value2;
+        }
+
     }
 }
